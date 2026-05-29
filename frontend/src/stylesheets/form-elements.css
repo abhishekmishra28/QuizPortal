@@ -1,0 +1,240 @@
+/* ===== Inputs ===== */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+input[type="datetime-local"],
+textarea,
+select {
+    height: 42px;
+    padding: 0 14px;
+    background: var(--bg-input);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+textarea {
+    height: auto;
+    padding: 12px 14px;
+    resize: vertical;
+    min-height: 80px;
+    color: var(--text-primary) !important;
+    background: var(--bg-input) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--text-muted);
+}
+
+select option {
+    background: var(--bg-input);
+    color: var(--text-primary);
+}
+
+/* ===== Buttons ===== */
+.primary-contained-btn {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    padding: 10px 22px;
+    border-radius: var(--radius-sm);
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: var(--shadow-sm);
+}
+
+.primary-contained-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-glow);
+    background: linear-gradient(135deg, var(--primary-light), var(--primary));
+}
+
+.primary-contained-btn:active {
+    transform: translateY(0);
+}
+
+.primary-outlined-btn {
+    background: transparent;
+    color: var(--primary-light);
+    border: 1.5px solid var(--primary);
+    padding: 10px 22px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.primary-outlined-btn:hover {
+    background: rgba(99, 102, 241, 0.15);
+    border-color: var(--primary-light);
+    transform: translateY(-1px);
+}
+
+.danger-btn {
+    background: transparent;
+    color: var(--danger);
+    border: 1.5px solid var(--danger);
+    padding: 8px 18px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.danger-btn:hover {
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.success-btn {
+    background: linear-gradient(135deg, #059669, var(--success));
+    color: white;
+    padding: 10px 22px;
+    border-radius: var(--radius-sm);
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.success-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+}
+
+/* ===== Ant Design overrides ===== */
+.ant-form-item {
+    margin-bottom: 16px !important;
+}
+
+.ant-form-item-label > label {
+    color: var(--text-secondary) !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+}
+
+.ant-tabs-tab {
+    color: var(--text-muted) !important;
+    font-weight: 500 !important;
+}
+
+.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: var(--primary-light) !important;
+}
+
+.ant-tabs-ink-bar {
+    background: var(--primary) !important;
+}
+
+.ant-tabs-nav::before {
+    border-color: var(--border) !important;
+}
+
+.ant-table {
+    background: var(--bg-card) !important;
+    color: var(--text-primary) !important;
+}
+
+.ant-table-thead > tr > th {
+    background: var(--bg-sidebar) !important;
+    color: var(--text-secondary) !important;
+    border-color: var(--border) !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+.ant-table-tbody > tr > td {
+    background: var(--bg-card) !important;
+    border-color: var(--border) !important;
+    color: var(--text-primary) !important;
+    font-size: 14px !important;
+}
+
+.ant-table-tbody > tr:hover > td {
+    background: var(--bg-card-hover) !important;
+}
+
+.ant-modal-content {
+    background: var(--bg-modal) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-lg) !important;
+    box-shadow: var(--shadow-lg) !important;
+}
+
+.ant-modal-header {
+    background: var(--bg-modal) !important;
+    border-color: var(--border) !important;
+}
+
+.ant-modal-title {
+    color: var(--text-primary) !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+}
+
+.ant-modal-close-x {
+    color: var(--text-muted) !important;
+}
+
+.ant-message-notice-content {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border) !important;
+    color: var(--text-primary) !important;
+    border-radius: var(--radius-sm) !important;
+}
+
+/* ===== Mobile Responsive Buttons & Inputs ===== */
+@media (max-width: 480px) {
+    .primary-contained-btn,
+    .primary-outlined-btn,
+    .danger-btn,
+    .success-btn {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="password"],
+    input[type="datetime-local"],
+    select {
+        font-size: 16px; /* Prevents mobile zoom on focus */
+    }
+}

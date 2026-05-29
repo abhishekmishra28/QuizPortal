@@ -1,0 +1,42 @@
+:root {
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --primary-light: #818cf8;
+    --secondary: #f59e0b;
+    --success: #10b981;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --info: #06b6d4;
+
+    --bg-base: #0a0f1e;
+    --bg-card: #111827;
+    --bg-card-hover: #1a2236;
+    --bg-sidebar: #0d1424;
+    --bg-header: #0d1424;
+    --bg-input: #1e293b;
+    --bg-modal: #111827;
+
+    --border: #1e293b;
+    --border-focus: #6366f1;
+
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.5);
+    --shadow-lg: 0 8px 32px rgba(0,0,0,0.6);
+    --shadow-glow: 0 0 20px rgba(99,102,241,0.3);
+}
+
+.bg-primary { background-color: var(--primary) !important; }
+.bg-white { background-color: var(--bg-card) !important; }
+.text-white { color: var(--text-primary) !important; }
+.bg-success { background-color: var(--success) !important; }
+.bg-warning { background-color: var(--warning) !important; }
+.bg-danger { background-color: var(--danger) !important; }
