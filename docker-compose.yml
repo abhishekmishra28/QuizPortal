@@ -12,15 +12,13 @@ services:
       - app-network
 
   backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
+    image: abhishekmishra001/quizportal:latest
     container_name: backend
     restart: always
     ports:
       - "5000:5000"
     env_file:
-      - ./backend/.env          # loads your JWT_SECRET, MONGO_URI etc.
+      - ./backend/.env
     environment:
       - MONGO_URI=mongodb://mongo:27017/yourdbname
       - NODE_ENV=production
@@ -30,9 +28,7 @@ services:
       - app-network
 
   frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
+    image: abhishekmishra001/quizportal-frontend:latest
     container_name: frontend
     restart: always
     ports:
@@ -48,4 +44,3 @@ networks:
 
 volumes:
   mongo_data:
-  
